@@ -7,3 +7,5 @@ function autosave(){
 
     cookiewrite();
 }
+
+console.log('save.js loaded.')
