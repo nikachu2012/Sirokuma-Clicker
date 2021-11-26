@@ -19,7 +19,6 @@ body{
 .clickerw-top{
     width: 900px;
     height: auto;
-    padding: 5px 0 5px 0;
     background-color: #4fc3f7;
     position: absolute;
 }
@@ -35,69 +34,35 @@ body{
     position: absolute;
 }
 .clickerw-clickpicture{
-    width: 200px;
-    height: 200px;
+    width: 300px;
+    height: 300px;
     object-fit: cover;
     border-radius: 50%;
     pointer-events: none;
     user-select: none;
 }
-.clickerw-picturebox{
-    top: 70px;
-    left: 50px;
-    position: absolute;
-
+.clickerw-clickpicture:active{
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    pointer-events: none;
+    user-select: none;
 }
 .clickerw-picturebox:active{
+    width: 280px;
+    height: 280px;
     object-fit: cover;
-    top: 75px;
-    left: 55px;
+    top: 80px;
+    left: 310px;
     position: absolute;
 }
-
-.clickerw-hyouji{
-    top: 80px;
+.clickerw-picturebox{
+    top: 70px;
     left: 300px;
     position: absolute;
 }
-
-
-.clickerw-skill{
-    top: 340px;
-    left: 320px;
-    position: absolute;
-}
-
-.skill-menu{
-    width: auto;
-    height: auto;
-    font-size: small;
-}
-
-.sisetu-menu{
-    width: auto;
-    height: auto;
-    font-size: small;
-}
-
-.clickerw-sisetu{
-    top: 340px;
-    position: absolute;
-    left: 590px;
-}
-
-.clickerw-darkswitch{
-    top: 15px;
-    right: 10px;
-    position: absolute;
-}
-
-.header-title{
-    margin-top: 15px;
-}
-
-.clickerw-save{
-    top: 12px;
-    right: 225px;
-    position: absolute;
+.clickerw-hyouji{
+    margin-top: 400px;
+    text-align: center;
 }
