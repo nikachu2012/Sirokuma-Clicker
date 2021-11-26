@@ -4,7 +4,7 @@ PCの中に残っていたしろくまクリッカーのベータ版集めです
 
 ### 著作権
 まあベータ版なのでAll rights reservedって書いてありますがオープンソースです。勝手に使ってください  
-※最新版は著作権を[NikachuClan](https://nikachuclan.github.io)が保有しています  
+※最新版は著作権を[NikachuClan](https://nikachuclan.github.io)が保有しています。  
 
 ### URL
 https://beta.sirokumaclicker.nikachu.net
