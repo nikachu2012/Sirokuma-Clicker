@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>しろくまクリッカー</title>
+    <!-- cssfile -->
+    <link rel="stylesheet" href="css/reboot.css">
+    <link rel="stylesheet" href="css/game-main.css">
+    <style id="darkmode"></style>
+</head>
+<body>
+    <div class="center header-title"><h1><span onclick="pushSirokumaTitle();" style="user-select: none;">しろくま</span><span onclick="pushClicker();" style="user-select: none;">クリッカー<span></span></h1></div>
+    <div class="clickerw-main">
+        <div class="clickerw-top">
+            <span style="font-size: xx-large;">しろくまクリッカー</span>
+            <span style="font-size: small;">&nbsp;&nbsp;version:&nbsp;1.1.0&nbsp;bulid1101</span>
+        </div>
+        <div class="clickerw-save">
+            <button onclick="cookiewrite();">セーブ</button>
+        </div>
+        <div class="clickerw-autosave">
+            <span id="autosave-text"></span>
+        </div>
+        <div class="clickerw-darkswitch">
+            <label><input type="checkbox" id="darkmodeSwitch">ダークモード</label>
+        </div>
+        <div class="clickerw-picturebox" onclick="pushSirokuma();">
+            <img src="img/sirokuma.jpg" class="clickerw-clickpicture" onclick="pushSirokuma();">
+        </div>
+        <div class="clickerw-hyouji">
+            <span style="font-size: x-large;" id="pointHyouji">0<br>&nbsp;しろくま</span>
+        </div>
+        <div class="clickerw-skill">
+            <div class="skill-top">スキル</div>
+            <div class="skill-top-back">非リアがなんか言ってるよ</div>
+            <div class="grid-container">
+                <div class="grid1 grid-1-4-style">2</div>
+                <div class="grid2 grid-1-4-style">2</div>
+                <div class="grid3 grid-1-4-style">2</div>
+                <div class="grid4 grid-1-4-style">2</div>
+                <div class="grid5 grid-5-style">2</div>
+                <div class="grid6 grid-1-4-style">2</div>
+                <div class="grid7 grid-1-4-style">2</div>
+                <div class="grid8 grid-1-4-style">2</div>
+                <div class="grid9 grid-1-4-style">2</div>
+                <div class="grid10 grid-5-style">2</div>
+                <div class="grid11 grid-1-4-style">2</div>
+                <div class="grid12 grid-1-4-style">2</div>
+                <div class="grid13 grid-1-4-style">2</div>
+                <div class="grid14 grid-1-4-style">2</div>
+                <div class="grid15 grid-5-style">2</div>     
+            </div>
+            <div class="grid-container">
+                <div class="grid1 grid-1-4-style">2</div>
+                <div class="grid2 grid-1-4-style">2</div>
+                <div class="grid3 grid-1-4-style">2</div>
+                <div class="grid4 grid-1-4-style">2</div>
+                <div class="grid5 grid-5-style">2</div>
+                <div class="grid6 grid-1-4-style">2</div>
+                <div class="grid7 grid-1-4-style">2</div>
+                <div class="grid8 grid-1-4-style">2</div>
+                <div class="grid9 grid-1-4-style">2</div>
+                <div class="grid10 grid-5-style">2</div>
+                <div class="grid11 grid-1-4-style">2</div>
+                <div class="grid12 grid-1-4-style">2</div>
+                <div class="grid13 grid-1-4-style">2</div>
+                <div class="grid14 grid-1-4-style">2</div>
+                <div class="grid15 grid-5-style">2</div>     
+            </div>
+            <div class="grid-container">
+                <div class="grid1 grid-1-4-style">2</div>
+                <div class="grid2 grid-1-4-style">2</div>
+                <div class="grid3 grid-1-4-style">2</div>
+                <div class="grid4 grid-1-4-style">2</div>
+                <div class="grid5 grid-5-style">2</div>
+                <div class="grid6 grid-1-4-style">2</div>
+                <div class="grid7 grid-1-4-style">2</div>
+                <div class="grid8 grid-1-4-style">2</div>
+                <div class="grid9 grid-1-4-style">2</div>
+                <div class="grid10 grid-5-style">2</div>
+                <div class="grid11 grid-1-4-style">2</div>
+                <div class="grid12 grid-1-4-style">2</div>
+                <div class="grid13 grid-1-4-style">2</div>
+                <div class="grid14 grid-1-4-style">2</div>
+                <div class="grid15 grid-5-style">2</div>     
+            </div>
+            
+
+
+
+
+            <!-- <select name="example2" size="8" class="skill-menu">
+                <option value="" style="font-size: large;">スキル</option>
+                <option value="x10 (コスト100)" onclick="skillX10();">x10 (コスト100)</option>
+                <option value="x100 (コスト10,000)" onclick="skillX100();">x100 (コスト10,000)</option>
+                <option value="x1,000 (コスト100,000)" onclick="skillX1k();">x1,000 (コスト100,000)</option>
+                <option value="x10,000 (コスト1,000,000)" onclick="skillX10k();">x10,000 (コスト1,000,000)</option>
+                <option value="x100,000 (コスト10,000,000)" onclick="skillX100k();">x100,000 (コスト10,000,000)</option>
+                <option value="x1,000,000 (コスト100,000,000)" onclick="skillX1000k();">x1,000,000 (コスト100,000,000)</option>
+                <option value="x10,000,000 (コスト1,000,000,000)" onclick="skillX10000k();">x10,000,000 (コスト1,000,000,000)</option>
+                <option value="x100,000,000 (コスト10,000,000,000)" onclick="skillX100000k();">x100,000,000 (コスト10,000,000,000)</option>
+            </select> -->
+        </div> 
+        <div class="clickerw-sisetu">
+            <div class="sisetu-top">建物</div>
+            <div class="sisetu-top-back">非リアがなんか言ってるよ</div>
+
+            <div class="sisetu-item" onclick="item1get();">
+                <img src="img/itempicture/item1.png"><span class="sisetu-item-title">シャープペン<br><span class="sisetu-item-sirokuma" id="item1-cost">10&nbsp;しろくま</span></span>
+            </div>
+            <div class="sisetu-item" onclick="item2get();">
+                <img src="img/itempicture/item2.png"><span class="sisetu-item-title">元素記号したじき<br><span class="sisetu-item-sirokuma" id="item2-cost">100&nbsp;しろくま</span></span>
+            </div>
+            <div class="sisetu-item" onclick="item3get();">
+                <img src="img/itempicture/item3.png"><span class="sisetu-item-title">家<br><span class="sisetu-item-sirokuma" id="item3-cost">5,000&nbsp;しろくま</span></span>
+            </div>
+            <div class="sisetu-item" onclick="item4get();">
+                <img src="img/itempicture/item4.png"><span class="sisetu-item-title">コンピュータLv1<br><span class="sisetu-item-sirokuma" id="item4-cost">10,000&nbsp;しろくま</span></span>
+            </div>
+            <div class="sisetu-item" onclick="item5get();">
+                <img src="img/itempicture/item5.png"><span class="sisetu-item-title">コンピュータLv2<br><span class="sisetu-item-sirokuma" id="item5-cost">50,000&nbsp;しろくま</span></span>
+            </div>
+            <div class="sisetu-item" onclick="item6get();">
+                <img src="img/itempicture/item6.png"><span class="sisetu-item-title">コンピュータLv3<br><span class="sisetu-item-sirokuma" id="item6-cost">100,000&nbsp;しろくま</span></span>
+            </div>
+            <div class="sisetu-item" onclick="item7get();">
+                <img src="img/itempicture/item7.png"><span class="sisetu-item-title">釣り場<br><span class="sisetu-item-sirokuma" id="item7-cost">500,000&nbsp;しろくま</span></span>
+            </div>
+            <div class="sisetu-item" onclick="item8get();">
+                <img src="img/itempicture/item8.png"><span class="sisetu-item-title">銀行<br><span class="sisetu-item-sirokuma" id="item8-cost">1,000,000&nbsp;しろくま</span></span>
+            </div>
+            <div class="sisetu-item" onclick="item9get();">
+                <img src="img/itempicture/item9.png"><span class="sisetu-item-title">雪<br><span class="sisetu-item-sirokuma" id="item9-cost">5,000,000&nbsp;しろくま</span></span>
+            </div>
+            <div class="sisetu-item" onclick="item10get();">
+                <img src="img/itempicture/item10.png"><span class="sisetu-item-title">クジラ<br><span class="sisetu-item-sirokuma" id="item10-cost">10,000,000&nbsp;しろくま</span></span>
+            </div>
+            <div class="sisetu-item" onclick="item11get();">
+                <img src="img/itempicture/item11.png"><span class="sisetu-item-title">コンピュータLv4<br><span class="sisetu-item-sirokuma" id="item11-cost">50,000,000&nbsp;しろくま</span></span>
+            </div>
+            <div class="sisetu-item" onclick="item12get();">
+                <img src="img/itempicture/item12.png"><span class="sisetu-item-title">コンピュータLv5<br><span class="sisetu-item-sirokuma" id="item12-cost">100,000,000&nbsp;しろくま</span></span>
+            </div>
+
+            <!-- <select name="example2" size="8" class="sisetu-menu">
+                <option value="" style="font-size: large;">アイテム</option>
+                <option onclick="item1get();">シャープペン(コスト10)</option>
+                <option onclick="item2get();">元素記号したじき(コスト100)</option>
+                <option onclick="item3get();">家(コスト5,000)</option>
+                <option onclick="item4get();">コンピュータLv1(コスト10,000)</option>
+                <option onclick="item5get();">コンピュータLv2(コスト50,000)</option>
+                <option onclick="item6get();">コンピュータLv3(コスト100,000)</option>
+                <option onclick="item7get();">釣り場(コスト500,000)</option>
+                <option onclick="item8get();">銀行(コスト1,000,000)</option>
+                <option onclick="item9get();">雪(コスト5,000,000)</option>
+                <option onclick="item10get();">クジラ(コスト10,000,000)</option>
+                <option onclick="item11get();">コンピュータLv4(コスト50,000,000)</option>
+                <option onclick="item12get();">コンピュータLv5(コスト100,000,000)</option>
+            </select> -->
+        </div>
+        <div class="clickerw-bottom">
+            <span style="font-size: small;">Copyright (C) 2021 Nikachu All rights reserved.</span>
+        </div>
+    </div>
+    
+    <script src="js/cookie.js"></script>
+    <script src="js/onload.js"></script>
+
+    <script src="js/console.command.js"></script> 
+    <script src="js/darkmode.js"></script>
+    <script src="js/clicker.js"></script>
+    <script src="js/save.js"></script>
+</body>
+</html>
