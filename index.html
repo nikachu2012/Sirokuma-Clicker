@@ -12,10 +12,20 @@
 </head>
 <body>
     <div class="center header-title"><h1><span onclick="pushSirokumaTitle();" style="user-select: none;">しろくま</span><span onclick="pushClicker();" style="user-select: none;">クリッカー<span></span></h1></div>
+    <div style="border: 1px solid red; padding: 5px 5px 5px 5px;">おしらせ: テキストでのセーブ書き出しができるようになりました！セーブデータをGoogleドキュメントなどにコピーしておけば、再起動などしても大丈夫になります。<button onclick="exportData();">データを書き出す</button><br>
+        <span>↓↓↓セーブデータはこちら↓↓↓</span><br>
+        <span id="writesave"></span>
+    </div>
+    <br>
+    <br>
+    <div style="border: 1px solid red; padding: 5px 5px 5px 5px;">
+        お知らせ２：しろくまクリッカー バージョン２パブリックベータを開始しました！しろくまクリッカーの次期バージョンを先行体験できます！<br>
+        注：v1からのデータ移行にはまだ対応しておりません。次期バージョンで対応する予定です。
+    </div>
     <div class="clickerw-main">
         <div class="clickerw-top">
             <span style="font-size: xx-large;">しろくまクリッカー</span>
-            <span style="font-size: small;">&nbsp;&nbsp;version:&nbsp;1.2.0.0&nbsp;bulid12001</span>
+            <span style="font-size: small;">&nbsp;&nbsp;version:&nbsp;1.2.1.0&nbsp;bulid12101</span>
         </div>
         <div class="clickerw-save">
             <button onclick="cookiewrite();">セーブ</button>
@@ -75,5 +85,6 @@
     <script src="js/darkmode.js"></script>
     <script src="js/clicker.js"></script>
     <script src="js/save.js"></script>
+    <script src="js/export.js"></script>
 </body>
 </html>

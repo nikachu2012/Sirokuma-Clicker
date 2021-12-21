@@ -14,20 +14,6 @@ function cookiewrite(){
     localStorage.setItem('skillX100000Kkakutoku', skillX100000Kkakutoku);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     console.log("cookie writed.")
 
 }
