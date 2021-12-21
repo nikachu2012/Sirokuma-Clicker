@@ -7,6 +7,28 @@ function exportData(){
     console.log(exportbuffer)
     document.getElementById('writesave').innerHTML = exportbuffer;
 }
+
+function importData(){
+    valueJSON = window.prompt("セーブテキストを貼り付けてください。", "");
+    var jsonbuffer = valueJSON;
+    var jsonObject = JSON.parse(jsonbuffer);
+    // console.log(jsonObject.sirokumapoint);
+
+    sirokumapoint = Number(jsonObject.sirokumapoint);
+    skillplus = Number(jsonObject.skillplus);
+    itemzouka = Number(jsonObject.itemzouka);
+
+    skillX10kakutoku = Number(jsonObject.skillX10kakutoku);
+    skillX100kakutoku = Number(jsonObject.skillX100kakutoku);
+    skillX1Kkakutoku = Number(jsonObject.skillX1Kkakutoku);
+    skillX10Kkakutoku = Number(jsonObject.skillX10Kkakutoku);
+    skillX100Kkakutoku = Number(jsonObject.skillX100Kkakutoku);
+    skillX1000Kkakutoku = Number(jsonObject.skillX1000Kkakutoku);
+    skillX10000Kkakutoku = Number(jsonObject.skillX10000Kkakutoku);
+    skillX100000Kkakutoku = Number(jsonObject.skillX100000Kkakutoku);
+    
+    updateHyouji();
+}
 /*
 sirokumapoint = 0;
 skillplus = 1;
