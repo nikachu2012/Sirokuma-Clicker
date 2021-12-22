@@ -5,12 +5,12 @@ console.log(jsonObject.name);
 function exportData(){
     var exportbuffer = '{"sirokumapoint": "' + sirokumapoint + '", "skillplus": "' + skillplus + '", "itemzouka": "' + itemzouka + '", "skillX10kakutoku": "' + skillX10kakutoku + '", "skillX100kakutoku": "' + skillX100kakutoku + '", "skillX1Kkakutoku": "' + skillX1Kkakutoku + '", "skillX10Kkakutoku": "' + skillX10Kkakutoku + '", "skillX100Kkakutoku": "' + skillX100Kkakutoku + '", "skillX1000Kkakutoku": "' + skillX1000Kkakutoku + '", "skillX10000Kkakutoku": "' + skillX10000Kkakutoku + '", "skillX100000Kkakutoku": "' + skillX100000Kkakutoku + '"}'
     console.log(exportbuffer)
-    document.getElementById('writesave').innerHTML = exportbuffer;
+    document.getElementById('writesave').innerHTML = '<textarea type="text" name="address" cols="50" rows="10">' + window.btoa(exportbuffer) + '</textarea>';
 }
 
 function importData(){
     valueJSON = window.prompt("セーブテキストを貼り付けてください。", "");
-    var jsonbuffer = valueJSON;
+    var jsonbuffer = window.atob(valueJSON);
     var jsonObject = JSON.parse(jsonbuffer);
     // console.log(jsonObject.sirokumapoint);
 
