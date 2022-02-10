@@ -1,7 +1,3 @@
-var jsonData = '{"name": "hara-chan"}';
-var jsonObject = JSON.parse(jsonData);
-console.log(jsonObject.name);
-
 function exportData(){
     var exportbuffer = '{"sirokumapoint": "' + sirokumapoint + '", "skillplus": "' + skillplus + '", "itemzouka": "' + itemzouka + '", "skillX10kakutoku": "' + skillX10kakutoku + '", "skillX100kakutoku": "' + skillX100kakutoku + '", "skillX1Kkakutoku": "' + skillX1Kkakutoku + '", "skillX10Kkakutoku": "' + skillX10Kkakutoku + '", "skillX100Kkakutoku": "' + skillX100Kkakutoku + '", "skillX1000Kkakutoku": "' + skillX1000Kkakutoku + '", "skillX10000Kkakutoku": "' + skillX10000Kkakutoku + '", "skillX100000Kkakutoku": "' + skillX100000Kkakutoku + '"}'
     console.log(exportbuffer)
